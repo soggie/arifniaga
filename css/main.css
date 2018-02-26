@@ -1,0 +1,42 @@
+/*=================================================================*/
+/*  CUSTOM STYLES BEGIN HERE                                       */
+/*=================================================================*/
+.header-bar {
+  padding: 1em 0;
+  border-bottom: 25pt solid rgb(226, 157, 50);
+}
+
+.header-bar .logo {
+
+}
+
+.header-bar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-bar nav ul li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.header-bar a {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 100%;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(150, 150, 150);
+  padding: 0 1em;
+}
+
+.header-bar a:hover, .header-bar a:active {
+  color: rgb(0, 0, 0);
+}
+
+
+#an-tagline {
+  background: cover center center no-repeat url("../img/placeholderimg.jpg");
+}
