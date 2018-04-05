@@ -1,0 +1,151 @@
+/*=================================================================*/
+/*  CUSTOM STYLES BEGIN HERE                                       */
+/*=================================================================*/
+html, body, .header-bar { height: 100% }
+body { margin: 0 }
+.header-bar {
+  width: 100%;
+  background: green;
+  background-image: url(../img/cover-hd.jpg);
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-bar .container-bg {
+  width: 100%;
+  position: absolute;
+  margin-top: 2em;
+  background-color: #e7ac45;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.header-bar .logo {
+  display: block;
+  padding: 0.4em 0;
+  margin: 0;
+}
+
+.header-bar nav ul {
+  list-style: none;
+  padding: 0.4em 0;
+  margin: 0;
+}
+
+.header-bar nav ul li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.header-bar a {
+  font-size: 100%;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #555555;
+  padding: 0 1em;
+}
+
+.header-bar a:hover, .header-bar a:active {
+  color: rgb(0, 0, 0);
+}
+
+.header-bar .call-to-action {
+  top: 70%;
+  max-width: 75%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  color: #9a4419;
+  font-size: 1.5em;
+  padding: 0.5em 1em 0em 1em;
+}
+
+.header-bar .emphasis {
+  color: #141462;
+}
+
+.emphasis {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.content-segment h1 {
+  text-align: center;
+  margin: 0.5em 0 0 0;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+.subhead {
+  text-align: center;
+}
+
+.services {
+  background-color: #ccc;
+}
+
+.contact-us, .footer {
+  background-color: #e7ac45;
+}
+
+.portfolio, .services, .about-us {
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+
+.services {
+  text-align: center;
+}
+
+.services h4 {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 300px 0.5em 0 0.5em;
+}
+
+.services .row {
+  margin-bottom: 3em;
+}
+
+.services-panel p {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.elevators-escalators { background: url(../img/elevators-escalators.jpg) center center no-repeat; }
+.hydraulics-scissorlifts { background: url(../img/hydraulics-scissorlifts.jpg) center center no-repeat; }
+.management-consultancy { background: url(../img/management-consultancy.jpg) center center no-repeat; }
+.mechanical-electrical { background: url(../img/mechanical-electrical.jpg) center center no-repeat; }
+
+.about-panel, .services-panel {
+  padding-top: 1em;
+  text-align: center;
+  max-height: 400px;
+  height: 400px;
+}
+
+.about-panel h4 {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 300px;
+}
+
+.about-dedication { background: url(../img/dedication.jpg) center center no-repeat; }
+.about-creative { background: url(../img/creative.jpg) center center no-repeat; }
+.about-energetic { background: url(../img/energetic.jpg) center center no-repeat; }
+
+
+.footer {
+  margin-top: 0;
+  font-size: 0.8em;
+}
+
+.contact-us {
+  padding: 1em 0 2em 0;
+  margin-bottom: 0;
+}
+
+.an-contact {
+  text-align: center;
+}
