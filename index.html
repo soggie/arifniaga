@@ -40,7 +40,7 @@
         <!-- Page navigation -->
         <nav class="nine columns">
           <ul class="u-pull-right">
-            <!--<li><a href="#portfolio">Portfolio</a></li> -->
+            <li><a href="#portfolio">Portfolio</a></li> 
             <li><a href="#services">Services</a></li>
             <li><a href="#about-us">About Us</a></li>
             <li><a href="#contact-us">Contact Us</a></li>
@@ -55,12 +55,14 @@
   </div>
 </header>
 
-<!--
+
 <section class="portfolio content-segment">
   <h1>Our Portfolio</h1>
   <p class="subhead">No compromise on quality and finish. We get the job done.</p>
+
+
 </section>
--->
+
 
 <section class="services content-segment">
   <h1 id="services">Our Services</h1>
@@ -68,19 +70,21 @@
 
   <div class="container u-full-width u-max-full-width">
     <div class="row">
-      <div class="three columns elevators-escalators services-panel">
+      <div class="six columns elevators-escalators services-panel">
         <h4>Elevators &amp; Escalators</h4>
         <p>Trust in us for elevator &amp; escalator installations</p>
       </div>
-      <div class="three columns hydraulics-scissorlifts services-panel">
+      <div class="six columns hydraulics-scissorlifts services-panel">
         <h4>Hydraulics &amp; Scissor Lifts</h4>
         <p>Getting you to the right heights safely</p>
       </div>
-      <div class="three columns management-consultancy services-panel">
+    </div>
+    <div class="row">
+      <div class="six columns management-consultancy services-panel">
         <h4>Management &amp; Consultancy</h4>
         <p>Let us help your business plan for success</p>
       </div>
-      <div class="three columns mechanical-electrical services-panel">
+      <div class="six columns mechanical-electrical services-panel">
         <h4>Mechanical &amp; Electrical</h4>
         <p>We are the experts in the M&amp;E field</p>
       </div>
@@ -116,6 +120,52 @@
 <section class="contact-us content-segment">
   <h1 id="contact-us">Contact Us</h1>
   <p class="subhead">Let us know how we can help</p>
+
+  <div class="container u-full-width u-max-full-width after-submit-notice">
+    <p>Thank you for your inquiry. We will get back to you shortly.</p>
+  </div>
+
+  <form class="container u-full-width u-max-full-width contact-form">
+    <div class="row">
+      <div class="twelve columns">
+        <label for="fullname">Full Name <span class="required">*</span></label>
+        <input class="u-full-width" type="text" placeholder="e.g. John Doe" id="fullname">
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <label for="company">Company Name</label>
+        <input class="u-full-width" type="text" placeholder="e.g. Doe Resources" id="company">
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <label for="phone">Phone Number</label>
+        <input class="u-full-width" type="text" placeholder="e.g. +601167686954" id="phone">
+      </div>
+      <div class="six columns">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input class="u-full-width" type="email" placeholder="e.g. john@example.com" id="email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <label for="inquiry">Iquiry Type <span class="required">*</span></label>
+        <select class="u-full-width" id="inquiry">
+          <option value="0">Big Ass Fans</option>
+          <option value="1">Elevators &amp; Escalators</option>
+          <option value="2">Hydraulics &amp; Scissors Lifts</option>
+          <option value="3">Management &amp; Consultancy</option>
+          <option value="3">Mechanical &amp; Electrical</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns center-align">
+        <input class="button-primary" id="submit-inquiry" type="button" value="Send Inquiry">
+      </div>
+    </div>
+  </form>
 </section>
 
 <footer class="footer">
@@ -147,5 +197,50 @@
   </div>
 </footer>
 
+<!-- Javascript
+    ================================================== -->
+<script>
+  var request = new XMLHttpRequest()
+  request.responseType = 'json'
+
+  var inquiry = function () {
+    request.open('POST', 'http://localhost:3000', true);
+    request.setRequestHeader("Content-Type", "application/json")
+    request.onload = function (body) {
+      console.log(body)
+    }
+
+    var inquiryTypes = [
+      "Big Ass Fans",
+      "Elevators & Escalators",
+      "Hydraulics & Scissor Lifts",
+      "Management & Consultancy",
+      "Mechanical & ELectrical"
+    ]
+
+    var inquiryType = document.getElementById("inquiry").value
+    var isValidType = Number.isInteger(inquiryType, 10) && inquiryTypes[inquiryTypes]
+
+    if (!isValidType) {
+      inquiryType = 0
+    }
+
+    var payload = {
+      fullname: document.getElementById("fullname").value,
+      company: document.getElementById("company").value,
+      phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
+      type: inquiryTypes[inquiryType] 
+    }
+
+    console.log(payload)
+
+    request.send(JSON.stringify(payload))
+  }
+
+  // Attach the inquiry function to the submit button
+  document.getElementById('submit-inquiry').onclick = inquiry
+
+</script>
 </body>
 </html>

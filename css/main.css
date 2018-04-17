@@ -2,11 +2,15 @@
 /*  CUSTOM STYLES BEGIN HERE                                       */
 /*=================================================================*/
 html, body, .header-bar { 
-  
   font-family: 'Rubik', sans-serif;
   letter-spacing: 0.1rem;
 }
+
 body { margin: 0 }
+
+.u-full-width {
+  max-width: 1200px;
+}
 
 .header-bar {
   width: 100%;
@@ -14,8 +18,10 @@ body { margin: 0 }
   background-image: url(../img/cover-hd.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center center;
-  height: 80rem;
+  background-position: top center;
+  height: 600px;
+  max-height: 600px;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, .header-bar {
@@ -47,12 +53,12 @@ h1, h2, h3, h4, h5, .header-bar {
 }
 
 .header-bar a {
-  font-size: 110%;
+  font-size: 100%;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   color: #9a4419;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .header-bar a:hover, .header-bar a:active {
@@ -60,7 +66,7 @@ h1, h2, h3, h4, h5, .header-bar {
 }
 
 .call-to-action {
-  bottom: 3rem;
+  bottom: 20%;
   max-width: 70%;
   position: absolute;
   background: rgba(255, 255, 255, 0.8);
@@ -103,8 +109,7 @@ h1, h2, h3, h4, h5, .header-bar {
 }
 
 .portfolio, .services, .about-us {
-  padding: 5rem;
-  margin-bottom: 5rem;
+  padding: 5rem 5rem 10rem 5rem;
 }
 
 .services {
@@ -113,7 +118,7 @@ h1, h2, h3, h4, h5, .header-bar {
 
 .services h4 {
   display: block;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
@@ -123,13 +128,19 @@ h1, h2, h3, h4, h5, .header-bar {
 
 .services-panel p {
   display: block;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #9a4419;
 }
 
-.elevators-escalators { background: url(../img/elevators-escalators.jpg) center center no-repeat; }
-.hydraulics-scissorlifts { background: url(../img/hydraulics-scissorlifts.jpg) center center no-repeat; }
-.management-consultancy { background: url(../img/management-consultancy.jpg) center center no-repeat; }
-.mechanical-electrical { background: url(../img/mechanical-electrical.jpg) center center no-repeat; }
+.elevators-escalators { background: url(../img/elevators-escalators-desat.jpg) center center no-repeat; }
+.hydraulics-scissorlifts { background: url(../img/hydraulics-scissorlifts-desat.jpg) center center no-repeat; }
+.management-consultancy { background: url(../img/management-consultancy-desat.jpg) center center no-repeat; }
+.mechanical-electrical { background: url(../img/mechanical-electrical-desat.jpg) center center no-repeat; }
+
+:hover.elevators-escalators { background-image: url(../img/elevators-escalators.jpg); }
+:hover.hydraulics-scissorlifts { background-image: url(../img/hydraulics-scissorlifts.jpg); }
+:hover.management-consultancy { background-image: url(../img/management-consultancy.jpg); }
+:hover.mechanical-electrical { background-image: url(../img/mechanical-electrical.jpg); }
 
 .about-panel, .services-panel {
   padding-top: 1em;
@@ -159,6 +170,37 @@ h1, h2, h3, h4, h5, .header-bar {
   margin-bottom: 0;
 }
 
+.contact-form {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.contact-form input.button-primary {
+  background-color: #9a4419;
+  border-color: #9a4419;
+  font-size: 1.5rem;
+  padding: 1rem 8rem;
+  margin: 2rem auto;
+  height: auto;
+}
+
+.center-align {
+  text-align: center
+}
+
+.after-submit-notice {
+  background: rgb(255, 210, 170);
+  text-align: center;
+  padding: 2rem 2rem 0rem 2rem;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+.required {
+  color: red;
+}
+
 .an-contact {
   text-align: center;
 }
+
