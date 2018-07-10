@@ -50,11 +50,11 @@
           </nav>
 
           <!-- Page navigation for responsive -->
-          <select class="u-pull-right">
-            <option><a href="#portfolio">Portfolio</a></option>
-            <option><a href="#services">Services</a></option>
-            <option><a href="#about-us">About Us</a></option>
-            <option><a href="#contact-us">Contact Us</a></option>
+          <select class="u-pull-right" id="responsive-header-menu">
+            <option value="#portfolio">Portfolio</option>
+            <option value="#services">Services</option>
+            <option value="#about-us">About Us</option>
+            <option value="#contact-us">Contact Us</option>
           </select>
         </div>
       </div>
@@ -465,6 +465,11 @@
       centerMode: true,
       focusOnSelect: true,
       asNavFor: '.portfolio-carousel'
+    })
+
+    $('#responsive-header-menu').change(function () {
+      var selected = $(':selected', this)[0].value
+      window.location.href = selected
     })
   });
 </script>

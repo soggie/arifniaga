@@ -14,11 +14,20 @@ body { margin: 0 }
 
 .header-bar {
   width: 100%;
-  background-color: #ccc;
-  background-image: url(../img/cover-hd.jpg);
+  /*background-color: #ccc;*/
   /*background-size: 100%;*/
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
+
+  background: #f6e6b4; /* Old browsers */
+  background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6e6b4 0%,#ed9017 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
+
+  
+  background-image: url(../img/cover-hd.jpg);
   background-position: top center;
+
   height: auto;
   min-height: 600px;
   position: relative;
