@@ -14,13 +14,13 @@ body { margin: 0 }
 
 .header-bar {
   width: 100%;
-  background-color: #fff;
+  background-color: #ccc;
   background-image: url(../img/cover-hd.jpg);
-  background-size: 100%;
+  /*background-size: 100%;*/
   background-repeat: no-repeat;
   background-position: top center;
-  height: 600px;
-  max-height: 600px;
+  height: auto;
+  min-height: 600px;
   position: relative;
 }
 
@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, .header-bar {
   background-size: 10%;
   display: block;
   padding: 1.5rem 0 1.5rem 3.5rem;
+  min-height: 1rem;
   margin: 0;
 }
 
@@ -60,11 +61,19 @@ h1, h2, h3, h4, h5, .header-bar {
   text-decoration: none;
   text-transform: uppercase;
   color: #9a4419;
-  padding: 0 1rem;
+  padding: 0 0.2rem;
 }
 
 .header-bar a:hover, .header-bar a:active {
   color: rgb(0, 0, 0);
+}
+
+.header-bar select {
+  display: none;
+
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px rgba(255, 255, 255, 0.8);
 }
 
 .call-to-action {
@@ -275,4 +284,42 @@ h1, h2, h3, h4, h5, .header-bar {
   max-width: 100%;
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 900px) {
+  .header-bar {
+    /*height: 250px;*/
+  }
+
+  .logo label {
+    font-size: 0.8rem;
+  }
+
+  .header-bar .logo {
+    margin-top: 0.8rem;
+  }
+
+  .header-bar nav {
+    display: none;
+  }
+
+  .header-bar select {
+    display: block;
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+
+  h1.responsive-header {
+    font-size: 3em;
+  }
+
+  .hide-when-responsive {
+    display: none;
+  }
+
+  .call-to-action h1 {
+    display: none;
+  }
 }
