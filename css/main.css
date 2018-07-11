@@ -8,99 +8,108 @@ html, body, .header-bar {
 
 body { margin: 0 }
 
-.u-full-width {
-  max-width: 1200px;
-}
-
-.header-bar {
-  width: 100%;
-  /*background-color: #ccc;*/
-  /*background-size: 100%;*/
-  /*background-repeat: no-repeat;*/
-
-  background: #f6e6b4; /* Old browsers */
-  background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #f6e6b4 0%,#ed9017 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
-
-  
-  background-image: url(../img/cover-hd.jpg);
-  background-position: top center;
-
-  height: auto;
-  min-height: 600px;
-  position: relative;
-}
-
 h1, h2, h3, h4, h5, .header-bar {
   font-family: 'Quicksand', sans-serif; 
 }
 
-.header-bar .container-bg {
-  width: 100%;
-  background-color: #e7ac45;
-  letter-spacing: .1rem;
+.u-full-width {
+  max-width: 1200px;
 }
 
-.header-bar .logo {
-  background: url(../img/arifniaga-logo.png) left 50% no-repeat;
-  background-size: 10%;
-  display: block;
-  padding: 1.5rem 0 1.5rem 3.5rem;
-  min-height: 1rem;
-  margin: 0;
-}
+/* Styling for header bar links */
+  .header-bar {  
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9c667+0,f79621+100;Orange+3D+%234 */
+    background: #f9c667; /* Old browsers */
+    background: -moz-linear-gradient(top, #f9c667 0%, #f79621 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f9c667 0%,#f79621 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f9c667 0%,#f79621 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c667', endColorstr='#f79621',GradientType=0 ); /* IE6-9 */
+  }
 
-.header-bar nav ul {
-  list-style: none;
-  padding: 1.5rem 0;
-  margin: 0;
-}
+  .header-bar a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #9a4419;
+    margin: 0 0.5rem;
+  }
 
-.header-bar nav ul li {
-  display: inline;
-  padding: 0;
-  margin: 0;
-}
+  .header-bar a:hover, .header-bar a:active {
+    color: rgb(0, 0, 0);
+  }
 
-.header-bar a {
-  font-size: 90%;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #9a4419;
-  padding: 0 0.2rem;
-}
+/* Styling for header components: logo, menu, dropdown */
+  .logo {
+    background: url(../img/arifniaga-logo.png) left 50% no-repeat;
+    background-size: 3.3rem 4.2rem;
+    display: block;
+    padding: 1.5rem 0 1.5rem 3.5rem;
+    min-height: 1rem;
+    margin: 0 0 0 2rem;
+  }
 
-.header-bar a:hover, .header-bar a:active {
-  color: rgb(0, 0, 0);
-}
+  .logo-short {
+    display: none;
+  }
 
-.header-bar select {
-  display: none;
+  .nav-container {
+    margin: 0 2rem 0 0;
+  }
 
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px rgba(255, 255, 255, 0.8);
-}
+  .nav-container ul {
+    list-style: none;
+    padding: 1.5rem 0;
+    margin: 0;
+  }
 
-.call-to-action {
-  bottom: 20%;
-  max-width: 70%;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.8);
-  color: #9a4419;
-  font-size: 1.5rem;
-  padding: 2.5rem 1rem 0rem 1rem;
-}
+  .nav-container li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
 
-.call-to-action h1 {
-  font-family: 'Hind', sans-serif;
-  letter-spacing: .2rem;
-}
+  .nav-container select {
+    display: none;
 
-.header-bar .emphasis {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #9a4419;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px rgba(255, 255, 255, 0.8);
+  }
+
+/* Styling for call to action segment */
+  .call-to-action {
+    background: url(../img/cover-hd.png) top center no-repeat;
+    background-size: 100% 100%;
+    min-height: 500px;
+    position: relative;
+  }
+
+  .cta-header-container {
+  }
+
+  .cta-header-container h1 {
+    display: inline-block;
+    position: absolute;
+    bottom: 1rem;
+    padding: 2rem;
+
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* styling */
+    color: #9a4419;
+    font-size: 2rem;
+    font-family: 'Hind', sans-serif;
+    letter-spacing: .2rem;
+    background: red;
+  }
+
+.call-to-action .emphasis {
   color: #141462;
 }
 
@@ -162,10 +171,15 @@ h1, h2, h3, h4, h5, .header-bar {
 .management-consultancy { background: url(../img/management-consultancy-desat.jpg) center center no-repeat; }
 .mechanical-electrical { background: url(../img/mechanical-electrical-desat.jpg) center center no-repeat; }
 
-:hover.elevators-escalators { background-image: url(../img/elevators-escalators.jpg); }
+/*:hover.elevators-escalators { background-image: url(../img/elevators-escalators.jpg); }
 :hover.hydraulics-scissorlifts { background-image: url(../img/hydraulics-scissorlifts.jpg); }
 :hover.management-consultancy { background-image: url(../img/management-consultancy.jpg); }
-:hover.mechanical-electrical { background-image: url(../img/mechanical-electrical.jpg); }
+:hover.mechanical-electrical { background-image: url(../img/mechanical-electrical.jpg); }*/
+
+.elevators-escalators { background-image: url(../img/elevators-escalators.jpg) center center no-repeat; }
+.hydraulics-scissorlifts { background-image: url(../img/hydraulics-scissorlifts.jpg) center center no-repeat; }
+.management-consultancy { background-image: url(../img/management-consultancy.jpg) center center no-repeat; }
+.mechanical-electrical { background-image: url(../img/mechanical-electrical.jpg) center center no-repeat; }
 
 .about-panel, .services-panel {
   padding-top: 1em;
@@ -295,17 +309,9 @@ h1, h2, h3, h4, h5, .header-bar {
   height: auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .header-bar {
     /*height: 250px;*/
-  }
-
-  .logo label {
-    font-size: 0.8rem;
-  }
-
-  .header-bar .logo {
-    margin-top: 0.8rem;
   }
 
   .header-bar nav {
@@ -314,11 +320,11 @@ h1, h2, h3, h4, h5, .header-bar {
 
   .header-bar select {
     display: block;
-    margin-top: 1em;
+    margin-top: 1rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
   h1.responsive-header {
     font-size: 3em;
@@ -330,5 +336,15 @@ h1, h2, h3, h4, h5, .header-bar {
 
   .call-to-action h1 {
     display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo-long {
+    display: none;
+  }
+
+  .logo-short {
+    display: block;
   }
 }
